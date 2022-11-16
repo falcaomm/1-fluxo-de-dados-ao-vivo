@@ -1,12 +1,18 @@
 import React from 'react'
-import {ContainerPostagem, Image, Description} from './styles'
+import { ContainerPostagem, Image, Description, Title } from './styles'
 
-const TelaDaPostagem = () => {
+const TelaDaPostagem = (props) => {
   return (
-    <ContainerPostagem>
-            <Image src={"https://picsum.photos/536/354"} alt='drone view'/>
-            <Description>{'Lorem Ipsum'}</Description>
-    </ContainerPostagem>
+    (props.image.length > 0 && props.titulo.length > 0) ?
+      <ContainerPostagem>
+        <Title>{props.titulo}</Title>
+        <Image src={props.image} alt='Insira sua imagem por link aqui' />
+        <Description>{props.descricao}</Description>
+      </ContainerPostagem>
+      : 
+      <ContainerPostagem>
+        <Image src="https://lojastalim.com.br/894-large_default/placa-decorativa-personalizada-sua-imagem-aqui.jpg" alt='descrição' />
+      </ContainerPostagem>
   )
 }
 

@@ -21,3 +21,8 @@ export const Description = styled.p`
     padding-top: 1rem;
 `
 
+export const Title = styled.h1`
+    max-width: 500px;
+    padding-top: 1rem;
+`
+
